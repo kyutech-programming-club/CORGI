@@ -21,6 +21,15 @@
     <tr>
         <th>講義選択</th>
     </tr>
+
+    <form action="cgi-bin/formmail.cgi" method="post">
+<p>講義名：<br>
+<select name="select"onChange="location.href=value;">
+<option value="zyourite">情報リテラシー</option>
+<option value="Taurus">解析学A</option>
+</select></p>
+<input type="submit" value="送信"><input type="reset" value="リセット">
+</form>
         <tr>
         <td> <a href="test.html">情報リテラシー</a> </td>
         </tr>
