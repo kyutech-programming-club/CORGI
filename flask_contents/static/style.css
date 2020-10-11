@@ -1,0 +1,32 @@
+#today {background-color:rgb(8, 135, 253);}
+
+
+.search_container{
+    box-sizing: border-box;
+  }
+
+  .search_container input[type="text"]{
+    border: 1px solid #999;
+    padding: 3px 5px;
+    border-radius: 20px;
+    height: 2.0em;
+    width: 245px;
+    overflow: hidden;
+  }
+
+  .search_container input[type="text"]:focus {
+    outline: 0;
+  }
+  
+  .search_container input[type="submit"]{
+    cursor: pointer;
+    font-family: FontAwesome;
+    font-size: 1.3em;
+    border: none;
+    background: none;
+    color: #0150c7;
+    outline : none;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
