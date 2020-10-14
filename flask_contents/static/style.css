@@ -1,6 +1,32 @@
-#today {background-color:rgb(255, 153, 0);}
 
+@keyframes right{
+  0%{
+      transform: translateX(0);
+  }
+  100%{
+      transform: translateX(840px);
+  }
+}
 
+.circle_corgi{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: #4694d1;
+  border-radius: 100px;
+animation: right 10s .11s ease-out infinite alternate;
+}
+
+.today {
+  background-color:rgb(255, 153, 0);
+}
+.today #opacity02{
+  opacity: 0.5;
+  font-size: 150px;
+}
+}
 .search_container{
     box-sizing: border-box;
   }
