@@ -6,6 +6,10 @@ from flask_contents import app
 def show_index():
     return render_template('entries/index.html')
 
+@app.route('/url')
+def show_url():
+    return render_template("entries/url.html")
+
 @app.route('/go', methods=["POST"])
 def show_test():
     return render_template('entries/test.html')
