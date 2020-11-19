@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% extends 'valuelec_template/entries/layout.html' %}
-{% block content %}
+{% block body %}
 <html>
 <head>
     <meta charset="utf-8">
@@ -63,10 +63,10 @@
                                 background-size : 400px;">
 
                             <tr>
-                                <td><a href="url">検索ページへ</a><td>
+                                <td><a href="{% url 'valuelec:serch_subject' %}">検索ページへ</a><td>
                             </tr>
                             <tr>
-                                <td><a href="url">使い方ページへ</a><td>
+                                <td><a href="{% url 'valuelec:explain' %}">使い方ページへ</a><td>
                             </tr>
                         </center>
                     </body>
@@ -81,4 +81,4 @@
 
 </body>
 </html>
-{% endblock%}
+{% endblock %}
