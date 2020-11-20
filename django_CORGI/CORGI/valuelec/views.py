@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import serch
+#from .models import serch
 from django.views.generic import ListView
 
 # Create your views here.
@@ -11,4 +11,3 @@ def serch_subject(request):
 
 def explain(request):
     return render(request,'valuelec_template/entries/explain.html')
-

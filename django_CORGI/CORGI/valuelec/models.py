@@ -1,8 +1,68 @@
 from django.db import models
- 
-class serch(models.Model):
-    title = models.CharField(max_length=100)
-    author = models.CharField(max_length=100)
- 
-    def __str__(self):
-        return self.title
+from django.core import validators
+
+class Valuelec_register(models.Model):
+    class_style = (
+        (1, '非同期'),
+        (2, '同期or対面'),
+        (3, '同期と非同期両方'),
+    )
+    five_evaluation = (
+        (1, '1'),
+        (2, '2'),
+        (3, '3'),
+        (4, '4'),
+        (5, '5'),
+    )
+    lec_name = models.CharField(
+        '講義名',
+        max_length=20,
+    )
+    teacher_name = models.CharField(
+        '教授名',
+        max_length=20,
+    )
+    total_evaluation = models.IntegerField(
+        '総合評価',
+        choices=five_evaluation,
+        default=3,
+    )
+    lec_simplicity = models.IntegerField(
+        '講義の簡単さ',
+        choices=five_evaluation,
+        default=3,
+    )
+    credit_simplicity = models.IntegerField(
+        '単位の取りやすさ',
+        choices=five_evaluation,
+        default=3,
+    )
+    task_smallness = models.IntegerField(
+        '課題の少なさ',
+        choices=five_evaluation,
+        default=3,
+    )
+    class_style = models.IntegerField(
+        '授業形態',
+        choices=class_style,
+        default=1
+    )
+    comment = models.CharField(
+        'コメント',
+        max_length=1000,
+        blank=True,
+    )
+    pub_date = models.DateTimeField(
+        '登録日',
+        auto_now_add=True,
+    )
+
+
+
+class Lecture(models.Model):
+    lec_name = models.CharField(max_length=20)
+    total_evaluation = models.IntegerField()
+
+class Teacher(models.Model):
+    teacher_name = models.CharField(max_length=20)
+    total_evaluation = models.IntegerField()
