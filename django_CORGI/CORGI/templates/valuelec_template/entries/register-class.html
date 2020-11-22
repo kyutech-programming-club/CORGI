@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-{% extends "layout.html" %}
+{% extends 'valuelec_template/entries/layout.html' %}
 {% block body%}
 <html>
 <hade>
 </hade>
 <body>
+  <form method="POST" class="post-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+  <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
 </body>
 </html>
 {% endblock%}
