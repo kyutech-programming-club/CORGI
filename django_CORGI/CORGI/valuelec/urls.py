@@ -10,4 +10,5 @@ urlpatterns = [
     path('serch_subject/', serch_subject_view.as_view(), name='serch_subject'),
     path('explain/', views.explain, name='explain'),
     path('registerclass/', views.registerclass, name='registerclass'),
+    path('subject/', views.subject, name='subject')
 ]

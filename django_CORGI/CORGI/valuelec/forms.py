@@ -21,5 +21,5 @@ class LectureForm(forms.ModelForm):
         model = Lecture
         fields = (
             'lec_name',
-            'teacher_name'
+            'teacher_name',
         )

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% extends "layout.html" %}
+{% extends 'valuelec_template/entries/layout.html' %}
 {% block body%}
 <html lang="ja">
 <head>
@@ -11,11 +11,11 @@
 <body>
     <div class="top_subject">
         <center>
-    <p id="opacity02"> <b>       
+    <p id="opacity02"> <b>
         CORGI
     </b></p>
     <h5>先輩後輩マッチングサイト</h5>
-        </center> 
+        </center>
     </div>
 
 
@@ -27,6 +27,8 @@
         <h1>単位の取りやすさ</h1>
         </center>
     <form type="get" action="#" >
+        {% csrf_token %}
+        {{ form.select.label }}
         <div class="evaluation">
           <input id="star1" type="radio" name="star" value="5" />
           <label for="star1"><span class="text">超楽</span>★</label>
@@ -62,7 +64,7 @@
             <!-- タイムライン部分③ -->
             <div id="bms_messages">
 
-                
+
 
                 <!--メッセージ２（右側）-->
                 <div class="bms_message bms_right">
@@ -82,8 +84,8 @@
                     </div>
                 </div>
                 <div class="bms_clear"></div>
-            
-            
+
+
             </div>
 
             <div id="bms_send">
@@ -98,3 +100,4 @@
 
 </body>
 </html>
+{% endblock %}

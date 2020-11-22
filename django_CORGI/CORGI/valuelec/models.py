@@ -56,6 +56,7 @@ class Lecture(models.Model):
     lec_name = models.CharField(
         '講義名',
         max_length=20,
+        unique=True,
         validators=[validators.RegexValidator(
             regex=u'^[ぁ-んァ-ヶー一-龠]+$',
             message='講義名は漢字・ひらがな・カタカナのみです',
@@ -69,4 +70,6 @@ class Lecture(models.Model):
             message='氏名は漢字・ひらがな・カタカナのみとし、氏と名の間に全角スペースを入れてください',
         )],
     )
-    total_evaluation = models.IntegerField()
+
+#    def __str__(self):
+#        return self.lec_name, self.teacher_name
