@@ -2,36 +2,27 @@
 {% extends 'valuelec_template/entries/layout.html' %}
 {% block body %}
 <html>
- 
+
 <head>
     <meta charset="utf-8" />
-    <title>ListViewサンプル</title>
+    <title>講義原作</title>
 </head>
- 
-<body>
 
+<body>
+  <h1>講義検索</h1>
     <form action="" method="get">
         <input name="query" value="{{ request.GET.query }}" type="text">
         <button type="submit">検索する</button>
     </form>
- 
-    <table border="1">
-        <tr>
-            <th>title</th>
-            <th>author</th>
-        </tr>
-        {% for book in object_list %}
-        <tr>
-            <td>{{ book.title }}</td>
-            <td>{{ book.author }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-
+    <a href="{% url 'valuelec:registerclass' %}">講義登録</a>
     <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
+    <h2>現在登録されている講義</h2>
+    {% for class in object_list %}
+        <p>{{ class.lec_name }}</p>
+      {% endfor %}
 
- 
+
 </body>
- 
+
 </html>
 {% endblock%}

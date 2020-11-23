@@ -14,14 +14,7 @@ class Valuelec_register(models.Model):
         (4, '4'),
         (5, '5'),
     )
-    lec_name = models.CharField(
-        '講義名',
-        max_length=20,
-    )
-    teacher_name = models.CharField(
-        '教授名',
-        max_length=20,
-    )
+    lec_id = models.IntegerField()
     total_evaluation = models.IntegerField(
         '総合評価',
         choices=five_evaluation,
@@ -60,9 +53,23 @@ class Valuelec_register(models.Model):
 
 
 class Lecture(models.Model):
-    lec_name = models.CharField(max_length=20)
-    total_evaluation = models.IntegerField()
+    lec_name = models.CharField(
+        '講義名',
+        max_length=20,
+        unique=True,
+        validators=[validators.RegexValidator(
+            regex=u'^[ぁ-んァ-ヶー一-龠]+$',
+            message='講義名は漢字・ひらがな・カタカナのみです',
+        )],
+    )
+    teacher_name = models.CharField(
+        '教授名',
+        max_length=20,
+        validators=[validators.RegexValidator(
+            regex=u'^[ぁ-んァ-ヶー一-龠]+\u3000[ぁ-んァ-ヶー一-龠]+$',
+            message='氏名は漢字・ひらがな・カタカナのみとし、氏と名の間に全角スペースを入れてください',
+        )],
+    )
 
-class Teacher(models.Model):
-    teacher_name = models.CharField(max_length=20)
-    total_evaluation = models.IntegerField()
+#    def __str__(self):
+#        return self.lec_name, self.teacher_name
