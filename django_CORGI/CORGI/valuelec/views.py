@@ -12,9 +12,9 @@ def index_render(request):
 def serch_subject(request):
     return render(request, 'valuelec_template/entries/serch_subject.html',)
 
-class serch_subject_view(ListView):
+class search_subject_view(ListView):
     model = Lecture
-    template_name = 'valuelec_template/entries/serch_subject.html'
+    template_name = 'valuelec_template/entries/search_subject.html'
     success_url = reverse_lazy('subject')
 
 def explain(request):
