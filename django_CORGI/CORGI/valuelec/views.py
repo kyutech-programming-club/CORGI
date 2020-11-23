@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-#from .models import serch,
+#from .models import search,
 from django.views.generic import ListView
 from .models import Valuelec_register, Lecture
 from .forms import Valuelec_registerForm, LectureForm
@@ -9,8 +9,8 @@ from django.urls import reverse_lazy
 def index_render(request):
     return render(request, 'valuelec_template/entries/index.html')
 
-def serch_subject(request):
-    return render(request, 'valuelec_template/entries/serch_subject.html',)
+def search_subject(request):
+    return render(request, 'valuelec_template/entries/search_subject.html',)
 
 class search_subject_view(ListView):
     model = Lecture
