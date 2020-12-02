@@ -1,12 +1,12 @@
 
 @keyframes right{
   0%{
-	width:20%;
-      transform: translateX(20%);
+	width:7%;
+      transform: translateX(10%);
   }
   100%{
-	width:80%;
-      transform: translateX(80%);
+	width:7%;
+      transform: translateX(1080%);
   }
 }
 
@@ -28,7 +28,6 @@
   opacity: 0.5;
   font-size: 150px;
 }
-
 
 @-webkit-keyframes passing-bar{
 	0% {
@@ -83,11 +82,12 @@
 
 
 
+
 /* subject */
 .top_subject {
 	background-color:rgb(255, 153, 0);
   }
-  .top_subject #opacity02{
+  .top_subject .opacity02{
 	opacity: 0.5;
 	font-size: 50px;
   }
