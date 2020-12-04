@@ -62,6 +62,17 @@ class Lecture(models.Model):
             message='講義名は漢字・ひらがな・カタカナのみです',
         )],
     )
+
+    lec_name_for_url = models.CharField(
+        '講義名（ローマ字or英語）',
+        max_length=30,
+        unique=True,
+        validators=[validators.RegexValidator(
+            regex=r'^[a-zA-Z]*$',
+            message='英数字のみです',
+        )],
+    )
+
     teacher_name = models.CharField(
         '教授名',
         max_length=20,
@@ -70,6 +81,3 @@ class Lecture(models.Model):
             message='氏名は漢字・ひらがな・カタカナのみとし、氏と名の間に全角スペースを入れてください',
         )],
     )
-
-#    def __str__(self):
-#        return self.lec_name, self.teacher_name
