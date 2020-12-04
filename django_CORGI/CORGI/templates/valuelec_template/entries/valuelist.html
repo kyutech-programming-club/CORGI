@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% extends 'valuelec_template/entries/layout.html' %}
+{% block body %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CORGI</title>
+</head>
+<body>
+  <p>{{ lecture.lec_name }}</p>
+    <ul class="list-group list-group-flush">
+      {% for value in lecture.valuelec_register_set.all %}
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-total">総合評価{{ value.total_evaluation }}</h4>
+          <table class="table table-striped">
+            <tr>
+              <td>講義の簡単さ</td>
+              <td>{{ value.lec_simplicity }}</td>
+            </tr>
+            <tr>
+              <td>単位の取りやすさ</td>
+              <td>{{ value.credit_simplicity }}</td>
+            </tr>
+            <tr>
+              <td>課題の少なさ</td>
+              <td>{{ value.task_smallness }}</td>
+            </tr>
+            <tr>
+              <td>授業形態</td>
+              <td>{{ value.class_style }}</td>
+            </tr>
+            <tr>
+              <td>コメント</td>
+              <td>{{ value.comment }}</td>
+            </tr>
+            <tr>
+              <td>登録日</td>
+              <td>{{ value.pub_date }}</td>
+            </tr>
+          </table>
+      </div>
+    </div>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
+  <br><br>
+</body>
+
+</html>
+{% endblock %}

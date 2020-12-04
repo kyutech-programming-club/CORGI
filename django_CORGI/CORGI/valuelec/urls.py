@@ -10,5 +10,5 @@ urlpatterns = [
     path('explain/', views.explain, name='explain'),
     path('registerclass/', views.registerclass, name='registerclass'),
     path('subject/', views.subject, name='subject'),
-    path('subect/<str:lec_name_for_url>/',views.showvalue,name="showvalue")
+    path('subect/<int:pk>/',views.showvalue.as_view(),name="showvalue")
 ]

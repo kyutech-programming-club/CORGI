@@ -17,8 +17,8 @@
     <a href="{% url 'valuelec:registerclass' %}">講義登録</a>
     <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
     <h2>現在登録されている講義</h2>
-    {% for class in classes %}
-        <p><a href="{% url 'valuelec:showvalue' class.lec_name_for_url %}">{{ class.lec_name }} </p>
+    {% for lecture in lectures %}
+        <p><a href="{% url 'valuelec:showvalue' lecture.id %}">{{ lecture.lec_name }} </p>
       {% endfor %}
 
 
