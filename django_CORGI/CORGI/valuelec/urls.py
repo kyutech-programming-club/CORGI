@@ -10,5 +10,6 @@ urlpatterns = [
     path('explain/', views.explain, name='explain'),
     path('registerclass/', views.registerclass, name='registerclass'),
     path('subject/', views.subject, name='subject'),
-    path('subect/<int:pk>/',views.showvalue.as_view(),name="showvalue")
+    path('subject/<int:pk>/',views.showvalue.as_view(),name="showvalue"),
+    path('subject/register',views.registervalue, name='registervalue')
 ]

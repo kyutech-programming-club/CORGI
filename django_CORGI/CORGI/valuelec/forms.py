@@ -7,6 +7,7 @@ class Valuelec_registerForm(forms.ModelForm):
     class Meta:
         model = Valuelec_register
         fields = (
+            'the_class',
             'total_evaluation',
             'lec_simplicity',
             'credit_simplicity',

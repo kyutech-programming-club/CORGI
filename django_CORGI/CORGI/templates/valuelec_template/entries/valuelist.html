@@ -8,6 +8,7 @@
     <title>CORGI</title>
 </head>
 <body>
+  <a href="{% url 'valuelec:registervalue' %}">評価を投稿する</a>
   <p>{{ lecture.lec_name }}</p>
     <ul class="list-group list-group-flush">
       {% for value in lecture.valuelec_register_set.all %}

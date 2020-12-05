@@ -19,12 +19,15 @@ class Lecture(models.Model):
             message='氏名は漢字・ひらがな・カタカナのみとし、氏と名の間に全角スペースを入れてください',
         )],
     )
+    def __str__(self):
+        set =  self.lec_name + "   " + self.teacher_name
+        return set
 
 class Valuelec_register(models.Model):
     class_style = (
-        (1, '非同期'),
-        (2, '同期or対面'),
-        (3, '同期と非同期両方'),
+        ('非同期', '非同期'),
+        ('同期or対面', '同期or対面'),
+        ('同期と非同期両方', '同期と非同期両方'),
     )
     five_evaluation = (
         (1, '1'),
@@ -35,6 +38,7 @@ class Valuelec_register(models.Model):
     )
     the_class = models.ForeignKey(
         Lecture,
+        verbose_name='講義名',
         on_delete=models.CASCADE
         )
     total_evaluation = models.IntegerField(
@@ -57,12 +61,12 @@ class Valuelec_register(models.Model):
         choices=five_evaluation,
         default=3,
     )
-    class_style = models.IntegerField(
+    class_style = models.CharField(
         '授業形態',
         choices=class_style,
-        default=1
+        max_length=15,
     )
-    comment = models.CharField(
+    comment = models.TextField(
         'コメント',
         max_length=1000,
         blank=True,

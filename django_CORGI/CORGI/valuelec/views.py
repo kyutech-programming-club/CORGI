@@ -23,10 +23,20 @@ def registerclass(request):
         form = LectureForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('valuelec:subject')
+            return redirect('valuelec:search_subject')
     else:
         form = LectureForm()
     return render(request, 'valuelec_template/entries/register-class.html', {'form': form})
+
+def registervalue(request):
+    if request.method == "POST":
+        form = Valuelec_registerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('valuelec:search_subject')
+    else:
+        form = Valuelec_registerForm()
+    return render(request, 'valuelec_template/entries/register-value.html', {'form': form})
 
 def subject(request):
     form = Valuelec_registerForm()
