@@ -18,6 +18,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+<<<<<<< HEAD
+        <div class="collapse navbar-collapse" class="navbarNav">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'valuelec:search_subject' %}">検索</a>
+=======
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item">
@@ -28,12 +34,17 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/logout">検索</a>
+>>>>>>> develop
                 </li>
             </ul>
         </div>
     </nav>
 
     <div class="blog-body">
+<<<<<<< HEAD
+        {% block body %}{% endblock %}
+=======
         {% block content %}{% endblock %}
+>>>>>>> develop
     </div>
 </div>
