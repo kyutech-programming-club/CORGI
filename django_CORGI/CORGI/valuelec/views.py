@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.shortcuts import render, redirect, get_object_or_404
 from django.db import models
 from . import models
@@ -52,3 +53,10 @@ def subject(request):
 class showvalue(generic.DetailView):
     model = Lecture
     template_name = "valuelec_template/entries/valuelist.html"
+=======
+from django.shortcuts import render
+
+# Create your views here.
+def index(request):
+    return render(request, 'valuelec_template/entries/index.html')
+>>>>>>> develop
