@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 {% extends 'valuelec_template/entries/layout.html' %}
-=======
-{% extends "layout.html" %}
->>>>>>> develop
 {% block body%}
 <html lang="ja">
 <head>
@@ -15,19 +11,11 @@
 <body>
     <div class="top_subject">
         <center>
-<<<<<<< HEAD
     <p class="opacity02"> <b>
         CORGI
     </b></p>
     <h5>先輩後輩マッチングサイト</h5>
         </center>
-=======
-    <p id="opacity02"> <b>       
-        CORGI
-    </b></p>
-    <h5>先輩後輩マッチングサイト</h5>
-        </center> 
->>>>>>> develop
     </div>
 
 
@@ -39,11 +27,9 @@
         <h1>単位の取りやすさ</h1>
         </center>
     <form type="get" action="#" >
-<<<<<<< HEAD
+
         {% csrf_token %}
         {{ form.select.label }}
-=======
->>>>>>> develop
         <div class="evaluation">
           <input id="star1" type="radio" name="star" value="5" />
           <label for="star1"><span class="text">超楽</span>★</label>
@@ -60,7 +46,6 @@
     </div>
     <!--<h3 id="me" user_id="1">あなたは後輩です</h3>
     <h3 id="partner" thread_id="1">先輩</h3>-->
-<<<<<<< HEAD
     <div class="users">
         <button class="user" user_class="2">K先輩</button>
     </div>
@@ -74,26 +59,10 @@
                 <div class="chat_user_status">
                     <div class="status_icon">●</div>
                     <div class="chat_user_name">情報リテラシー</div>
-=======
-    <div id="users">
-        <button class="user" user_id="2">K先輩</button>
-    </div>
-    <br>
-    <div id="your_container">
-
-        <!-- チャットの外側部分① -->
-        <div id="bms_messages_container">
-            <!-- ヘッダー部分② -->
-            <div id="bms_chat_header">
-                <div id="bms_chat_user_status">
-                    <div id="bms_status_icon">●</div>
-                    <div id="bms_chat_user_name">情報リテラシー</div>
->>>>>>> develop
                 </div>
             </div>
 
             <!-- タイムライン部分③ -->
-<<<<<<< HEAD
             <div class="messages">
 
 
@@ -123,37 +92,6 @@
             <div class="send">
                 <textarea class="send_message"></textarea>
                 <div class="send_btn">送信</div>
-=======
-            <div id="bms_messages">
-
-                
-
-                <!--メッセージ２（右側）-->
-                <div class="bms_message bms_right">
-                    <div class="bms_message_box">
-                        <div class="bms_message_content">
-                            <div class="bms_message_text">情報リテラシーって勉強しないと単位落としますか？</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bms_clear"></div>
-                <!--メッセージ１（左側）-->
-                <div class="bms_message bms_left">
-                    <div class="bms_message_box">
-                        <div class="bms_message_content">
-                            <div class="bms_message_text">3割落単するらしいから勉強したほうが良いよ</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bms_clear"></div>
-            
-            
-            </div>
-
-            <div id="bms_send">
-                <textarea id="bms_send_message"></textarea>
-                <div id="bms_send_btn">送信</div>
->>>>>>> develop
             </div>
         </div>
     </div>
@@ -162,9 +100,5 @@
 
 
 </body>
-<<<<<<< HEAD
 </html>
 {% endblock %}
-=======
-</html>
->>>>>>> develop

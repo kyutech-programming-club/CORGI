@@ -1,5 +1,4 @@
 from django.db import models
-<<<<<<< HEAD
 from django.core import validators
 
 class Lecture(models.Model):
@@ -76,7 +75,3 @@ class Valuelec_register(models.Model):
         '登録日',
         auto_now_add=True,
     )
-=======
-
-# Create your models here.
->>>>>>> develop

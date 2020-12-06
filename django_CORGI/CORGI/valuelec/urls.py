@@ -2,7 +2,6 @@ from django.urls import path
 
 from . import views
 
-<<<<<<< HEAD
 app_name = 'valuelec'
 
 urlpatterns = [
@@ -13,8 +12,4 @@ urlpatterns = [
     path('subject/', views.subject, name='subject'),
     path('subject/<int:pk>/',views.showvalue.as_view(),name="showvalue"),
     path('subject/register',views.registervalue, name='registervalue')
-=======
-urlpatterns = [
-    path('', views.index, name='index'),
->>>>>>> develop
 ]
