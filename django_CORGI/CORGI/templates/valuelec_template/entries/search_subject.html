@@ -16,14 +16,17 @@
     </form>
     <a href="{% url 'valuelec:registerclass' %}">講義登録</a>
     <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
-    <h2>現在登録されている講義</h2>
-    {% for lecture in lectures %}
+    <h2>講義一覧</h2>
+    {% for lecture in object_list %}
         <tr>
           <th><a href="{% url 'valuelec:showvalue' lecture.id %}">{{ lecture.lec_name }} </a></th>
           <th>{{ lecture.teacher_name }}</th>
         </tr>
         <br>
+      {% empty %}
+      <p>まだ講義登録がないようです！講義登録してください！</p>
       {% endfor %}
+
 
 
 </body>

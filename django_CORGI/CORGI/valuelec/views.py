@@ -8,13 +8,25 @@ from django.urls import reverse_lazy
 from django.http import Http404
 from django.views import generic
 
+
 # Create your views here.
 def index_render(request):
     return render(request, 'valuelec_template/entries/index.html')
 
-def search_subject(request):
-    context= {'lectures':models.Lecture.objects.all()}
-    return render(request, 'valuelec_template/entries/search_subject.html', context)
+class search_subject(generic.ListView):
+    model = Lecture
+    template_name = 'valuelec_template/entries/search_subject.html'
+
+    def get_queryset(self):
+        q_word = self.request.GET.get('query')
+        print(q_word)
+        if q_word:
+            object_list = Lecture.objects.filter(lec_name__icontains=q_word)
+            print("####################")
+            print(object_list)
+        else:
+            object_list = Lecture.objects.all()
+        return object_list
 
 def explain(request):
     return render(request,'valuelec_template/entries/explain.html')
