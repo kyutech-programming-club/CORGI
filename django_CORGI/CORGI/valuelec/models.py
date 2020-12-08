@@ -30,36 +30,36 @@ class Valuelec_register(models.Model):
         ('同期と非同期両方', '同期と非同期両方'),
     )
     five_evaluation = (
-        (1, '1'),
-        (2, '2'),
-        (3, '3'),
-        (4, '4'),
-        (5, '5'),
+        ('★', '★'),
+        ('★★', '★★'),
+        ('★★★', '★★★'),
+        ('★★★★', '★★★★'),
+        ('★★★★★', '★★★★★'),
     )
     the_class = models.ForeignKey(
         Lecture,
         verbose_name='講義名',
         on_delete=models.CASCADE
         )
-    total_evaluation = models.IntegerField(
+    total_evaluation = models.CharField(
         '総合評価',
         choices=five_evaluation,
-        default=3,
+        max_length=7,
     )
-    lec_simplicity = models.IntegerField(
+    lec_simplicity = models.CharField(
         '講義の簡単さ',
         choices=five_evaluation,
-        default=3,
+        max_length=7,
     )
-    credit_simplicity = models.IntegerField(
+    credit_simplicity = models.CharField(
         '単位の取りやすさ',
         choices=five_evaluation,
-        default=3,
+        max_length=7,
     )
-    task_smallness = models.IntegerField(
+    task_smallness = models.CharField(
         '課題の少なさ',
         choices=five_evaluation,
-        default=3,
+        max_length=7,
     )
     class_style = models.CharField(
         '授業形態',
