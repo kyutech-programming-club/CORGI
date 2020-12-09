@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, redirect, get_object_or_404
 from django.db import models
 from . import models
@@ -19,11 +18,8 @@ class search_subject(generic.ListView):
 
     def get_queryset(self):
         q_word = self.request.GET.get('query')
-        print(q_word)
         if q_word:
             object_list = Lecture.objects.filter(lec_name__icontains=q_word)
-            print("####################")
-            print(object_list)
         else:
             object_list = Lecture.objects.all()
         return object_list
@@ -54,13 +50,6 @@ def registervalue(request):
 def subject(request):
     form = Valuelec_registerForm()
     return render(request, 'valuelec_template/entries/subject.html', {'form': form})
-
-
-# def showvalue(request,the_class_id):
-#     template_name = "valuelec_template/entries/valuelist.html"
-#     values = get_object_or_404(Lecture,pk=the_class_id)
-#     context = {"values":values}
-#     return render(request,template_name,context)
 
 class showvalue(generic.DetailView):
     model = Lecture
