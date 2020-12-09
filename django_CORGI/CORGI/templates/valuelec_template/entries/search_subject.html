@@ -5,26 +5,41 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>講義原作</title>
+
+      <title>講義検索</title>
+
 </head>
 
 <body>
-  <h1>講義検索</h1>
+  <h1 class="kensaku_midashi">講義検索</h1>
     <form action="" method="get">
         <input name="query" value="{{ request.GET.query }}" type="text">
-        <button type="submit">検索する</button>
+        <a href="#" class="btn-square-shadow" type="submit">
+          検索する
+        </a>
     </form>
+    <h5><strong>
     <a href="{% url 'valuelec:registerclass' %}">講義登録</a>
+    /
     <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
-    <h2>講義一覧</h2>
+    <br></br>
+    <h1 class=ichiran_midashi>
+      講義一覧
+    </h1>
+  </strong></h5>
+
+    <div>
     {% for lecture in object_list %}
+        <h5><strong>
         <tr>
           <th><a href="{% url 'valuelec:showvalue' lecture.id %}">{{ lecture.lec_name }} </a></th>
           <th>{{ lecture.teacher_name }}</th>
         </tr>
+      </strong></h5>
         <br>
       {% empty %}
       <p>まだ講義登録がないようです！講義登録してください！</p>
+      </div>
       {% endfor %}
 
 
