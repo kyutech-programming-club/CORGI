@@ -98,7 +98,7 @@
 .chat  .chat-bar {
 	position: relative;
 	display: inline-block;
-	/*　後ほど解説　*/
+
 	-webkit-transform: translate3d(0, 0, 0);
 	-ms-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
@@ -113,16 +113,13 @@
 	left: 0;
 	top: 0;
 	z-index: 1;
-	/* 任意の値 */
 	background: #000;
 }
 .chat  .chat-txt {
 	opacity: 0;
-	/* 後ほど解説 */
 	-webkit-transform: translate3d(0, 0, 0);
 	-ms-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
-	/* 任意の値 */
 	font-size: 4.0rem;
 	font-weight: bold;
 	line-height: 1.5;
@@ -167,19 +164,19 @@
   }
 
 
-/*subject.html*/
+
 .your_container{
     height:600px;
     width: 50%;
 }
-/* チャットの外側部分① */
+
 .messages_container{
-    height: 100%;/*your_containerに対して100%になる */
+    height: 100%;
     width: 100%;
     background-color: #eee;
 }
 
-/* ヘッダー部分② */
+
 
 .chat_header {
     padding: 6px;
@@ -188,24 +185,24 @@
     background: #ddd;
     border: 1px solid #ccc;
 }
-    /* ステータスマークとユーザー名 */
+
     .chat_user_status {
-        float: left;/* bms_chat_headerに対して左寄せ */
+        float: left;
     }
-    /* ステータスマーク */
+
     .status_icon {
-        float: left;/* bms_chat_user_statusに対して左寄せ */
+        float: left;
         line-height: 2em;
     }
-    /* ユーザー名 */
+
 
     .chat_user_name {
-        float: left;/* bms_chat_user_statusに対して左寄せ */
+        float: left;
         line-height: 2em;
         padding-left: 8px;
     }
 
-/* タイムライン部分③ */
+
 .messages {
     overflow: auto;
     height:100%;
@@ -214,7 +211,7 @@
     background-color: #eee;
     box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset
 }
-    /* メッセージ全般のスタイル */
+
 
     .message {
         margin: 0px;
@@ -224,20 +221,18 @@
         white-space: normal;
 	}
 	.message_box{
-		margin-top: 20px;/*上下の吹き出しがひっつかない様に隙間を入れる*/
-		max-width: 100%;/*文字が長くなった時に吹き出しがタイムラインからはみ出さない様にする*/
+		margin-top: 20px;
+		max-width: 100%;
 		font-size: 16px;
 	}
-		/*
-		*追加
-		*/
+
 		.message_content{
 			padding: 20px;
 		}
 
-	/* メッセージ１（左側） */
+
 	.left {
-		float: left;/*吹き出しをbms_messagesに対して左寄せ*/
+		float: left;
 		line-height: 1.3em;
 	}
 
@@ -249,9 +244,8 @@
 			margin-right: 50px;
 		}
 
-	/* メッセージ２（右側） */
 	.right {
-		float: right;/*吹き出しをbms_messagesに対して右寄せ*/
+		float: right;
 		line-height: 1.3em;
 	}
 		/*
@@ -349,4 +343,35 @@
 	  .evaluation label:hover ~ label,
 	  .evaluation input[type='radio']:checked ~ label{
 		color: #ffcc00;
+	  }
+
+	  .btn-square-shadow {
+		display: inline-block;
+		padding: 0.5em 1em;
+		text-decoration: none;
+		background:  #ffcc00;/*ボタン色*/
+		color: #FFF;
+		border-bottom: solid 4px  #c79f00cc;
+		border-radius: 3px;
+	  }
+	  .btn-square-shadow:active {
+		/*ボタンを押したとき*/
+		-webkit-transform: translateY(4px);
+		transform: translateY(4px);/*下に動く*/
+		box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+		border-bottom: none;
+	  }
+
+	  .kensaku_midashi {
+		padding: 0.25em 0.5em;/*上下 左右の余白*/
+		color: #494949;/*文字色*/
+		background: transparent;/*背景透明に*/
+		border-left: solid 5px #ffcc00;/*左線*/
+	  }
+
+		.ichiran_midashi {
+		padding: 0.25em 0.5em;/*上下 左右の余白*/
+		color: #494949;/*文字色*/
+		background: transparent;/*背景透明に*/
+		border-left: solid 5px #ffcc00;/*左線*/
 	  }
