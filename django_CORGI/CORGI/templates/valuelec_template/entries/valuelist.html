@@ -9,7 +9,7 @@
 </head>
 <body>
   <a href="{% url 'valuelec:registervalue' %}">評価を投稿する</a>
-  <p>{{ lecture.lec_name }}</p>
+  <h1>{{ lecture.lec_name }}</h1>
     <ul class="list-group list-group-flush">
       {% for value in lecture.valuelec_register_set.all %}
       <div class="card">
@@ -46,6 +46,7 @@
     {% endfor %}
   </ul>
   <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
+  <br>
   <a href="{% url 'valuelec:search_subject' %}">講義一覧ページに戻る</a>
   <br><br>
 </body>
