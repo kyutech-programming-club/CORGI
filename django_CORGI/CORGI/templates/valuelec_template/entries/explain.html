@@ -10,24 +10,31 @@
 </head>
 
 <body>
-    <h1>CORGI</h1>
-    <h5>先輩後輩マッチングサイト</h5>
-    <br><br><br>
+    <h1 class= "corgi_label">CORGI</h1>
+    <strong><h5>🐕先輩後輩マッチングサイト🐕</h5></strong>
+    <br>
+    <h6>悩める大学生が先輩とマッチングすることで</h6>
+    <h6>問題を解決できるサイトです</h6>
+    <br>
+    
     <div class="table">
         <table width="100%">
-         <h3>使い方</h3>
+        <strong><h3 class= "use_label">使い方</h3></strong>
         </table>
     </div>
     <br>
-    <h5>「トップページ」➡︎「検索ぺージ」から講義を選択してね！！
-    <br>
-         ➡︎講義がない時
+    <h5 class= "explanation1">
+        <strong>[講義評価検索の方法]</strong>
+        <br><a href="{% url 'valuelec:index_render' %}">「トップページ」</a>➡︎<a href="{% url 'valuelec:search_subject' %}">「検索ぺージ」</a>から講義を選択してね！！
+    <br><br>
+    <strong>[講義評価をする方法]</strong>
+    <br><a href="{% url 'valuelec:registerclass' %}">講義登録</a>から
          講義名と教授名を入力して新しく登録してね！！
     </h5>
     <!-- 画像挿入 -->
     <br>
-    <h4>⭐️５評価について</h4>
-    <h5>自分が受けた講義を⭐️５で評価してください！！</h5>
+    <h4>⭐️５段階評価について</h4>
+    <h5><a href="{% url 'valuelec:registerclass' %}">講義登録</a>から自分が受けた講義を⭐️５で評価してください！！</h5>
     <!-- 画像挿入 -->
     <br><br>
     <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
