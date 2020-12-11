@@ -47,6 +47,8 @@
         </table>
       </div>
     </div>
+    {% empty %}
+    <p>まだ講義評価が投稿されていないようです！あなたの評価お待ちしてます！</p>
     {% endfor %}
   </ul>
   <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
