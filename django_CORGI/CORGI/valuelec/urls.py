@@ -10,6 +10,10 @@ urlpatterns = [
     path('explain/', views.explain, name='explain'),
     path('registerclass/', views.registerclass, name='registerclass'),
     path('subject/', views.subject, name='subject'),
-    path('subject/<int:pk>/',views.showvalue.as_view(),name="showvalue"),
-    path('subject/register',views.registervalue, name='registervalue')
+    path('subject/<int:pk>/',views.showvalue.as_view(),name='showvalue'),
+    path('subject/register/',views.registervalue, name='registervalue'),
+    path('question/registerquestion/',views.registerquestion,name='registerquestion'),
+    path('question/',views.question.as_view(),name='question'),
+    path('question/<int:pk>/',views.questiondetail.as_view(),name='questiondetail'),
+    path('question/registeranswer/',views.registeranswer,name='registeranswer'),
 ]

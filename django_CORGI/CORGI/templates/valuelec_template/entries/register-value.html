@@ -2,8 +2,10 @@
 {% extends 'valuelec_template/entries/layout.html' %}
 {% block body%}
 <html>
+
 <head>
 </head>
+
 <body>
   <form action='' method="POST" class="post-form">
     {% csrf_token %}
@@ -13,5 +15,6 @@
   <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
   <a href="{% url 'valuelec:search_subject' %}">講義一覧ページに戻る</a>
 </body>
+
 </html>
 {% endblock%}

@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Valuelec_register, Lecture
+from .models import Valuelec_register, Lecture, Question, Answer
 
 class Valuelec_registerForm(forms.ModelForm):
 
@@ -23,4 +23,22 @@ class LectureForm(forms.ModelForm):
         fields = (
             'lec_name',
             'teacher_name',
+        )
+
+class QuestionForm(forms.ModelForm):
+
+    class Meta:
+        model = Question
+        fields = (
+            'question_id',
+            'question',
+        )
+
+class AnswerForm(forms.ModelForm):
+
+    class Meta:
+        model = Answer
+        fields = (
+            'answer_id',
+            'answer'
         )

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends 'valuelec_template/entries/layout.html' %}
+{% block body %}
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CORGI</title>
+</head>
+
+<body>
+  <a href="{% url 'valuelec:registeranswer' %}">回答を投稿する</a>
+  <h1>{{ question.question }}</h1>
+  <ul class="list-group list-group-flush">
+    {% for answer in question.answer_set.all|dictsortreversed:"pub_date" %}
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-striped">
+          <tr>
+            <td>回答</td>
+            <td>{{ answer.answer }}</td>
+          </tr>
+          <tr>
+            <td>回答日</td>
+            <td>{{ answer.pub_date }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
+  <br>
+  <a href="{% url 'valuelec:search_subject' %}">講義一覧ページに戻る</a>
+  <br>
+  <a href="{% url 'valuelec:question' %}">質問一覧ページに戻る</a>
+  <br>
+</body>
+
+</html>
+{% endblock %}
