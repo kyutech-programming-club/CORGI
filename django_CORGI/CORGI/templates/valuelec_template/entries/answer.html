@@ -8,37 +8,20 @@
     <title>CORGI</title>
 </head>
 <body>
-  <a href="{% url 'valuelec:registervalue' %}">回答を投稿する</a>
-  <h1>{{ lecture.lec_name }}</h1>
+  <a href="{% url 'valuelec:registeranswer' %}">回答を投稿する</a>
+  <h1>{{ question.question }}</h1>
     <ul class="list-group list-group-flush">
-      {% for value in lecture.valuelec_register_set.all %}
+      {% for answer in question.answer_set.all|dictsortreversed:"pub_date" %}
       <div class="card">
         <div class="card-body">
-          <h4 class="card-total">総合評価{{ value.total_evaluation }}</h4>
           <table class="table table-striped">
             <tr>
-              <td>講義の簡単さ</td>
-              <td>{{ value.lec_simplicity }}</td>
+              <td>回答</td>
+              <td>{{ answer.answer }}</td>
             </tr>
             <tr>
-              <td>単位の取りやすさ</td>
-              <td>{{ value.credit_simplicity }}</td>
-            </tr>
-            <tr>
-              <td>課題の少なさ</td>
-              <td>{{ value.task_smallness }}</td>
-            </tr>
-            <tr>
-              <td>授業形態</td>
-              <td>{{ value.class_style }}</td>
-            </tr>
-            <tr>
-              <td>コメント</td>
-              <td>{{ value.comment }}</td>
-            </tr>
-            <tr>
-              <td>登録日</td>
-              <td>{{ value.pub_date }}</td>
+              <td>回答日</td>
+              <td>{{ answer.pub_date }}</td>
             </tr>
           </table>
       </div>
@@ -48,7 +31,9 @@
   <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
   <br>
   <a href="{% url 'valuelec:search_subject' %}">講義一覧ページに戻る</a>
-  <br><br>
+  <br>
+  <a href="{% url 'valuelec:question' %}">質問一覧ページに戻る</a>
+  <br>
 </body>
 
 </html>

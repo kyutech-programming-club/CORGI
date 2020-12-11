@@ -27,11 +27,13 @@
       質問一覧
     </h1>
   </strong></h5>
-
     <div>
     {% for question in object_list %}
         <h5><strong>
-          <a href="{% url 'valuelec:questiondetail' question.id %}">{{ question.question }} </a>
+          <tr>
+            <th><a href="{% url 'valuelec:questiondetail' question.id %}">{{ question.question }} </a></th>
+            <th>{{ question.question_id }}</th>
+          </tr>
       </strong></h5>
         <br>
       {% empty %}
