@@ -5,7 +5,6 @@ class Lecture(models.Model):
     lec_name = models.CharField(
         '講義名',
         max_length=20,
-        unique=True,
         validators=[validators.RegexValidator(
             regex=u'^[ぁ-んァ-ヶー一-龠]+$',
             message='講義名は漢字・ひらがな・カタカナのみです',
@@ -15,7 +14,7 @@ class Lecture(models.Model):
         '教授名',
         max_length=20,
         validators=[validators.RegexValidator(
-            regex=u'^[ぁ-んァ-ヶー一-龠]+\u3000[ぁ-んァ-ヶー一-龠]+$',
+            regex=u'^[ぁ-んァ-ヶー一-龠]+$',
             message='氏名は漢字・ひらがな・カタカナのみとし、氏と名の間に全角スペースを入れてください',
         )],
     )
@@ -73,5 +72,40 @@ class Valuelec_register(models.Model):
     )
     pub_date = models.DateTimeField(
         '登録日',
+        auto_now_add=True,
+    )
+
+class Question(models.Model):
+    question_id = models.ForeignKey(
+        Lecture,
+        verbose_name='講義名',
+        on_delete=models.CASCADE,
+    )
+    question = models.TextField(
+        'コメント',
+        max_length=1000,
+        blank=True,
+    )
+    pub_date = models.DateTimeField(
+        '質問日',
+        auto_now_add=True,
+    )
+
+    def __str__(self):
+        return self.question
+
+class Answer(models.Model):
+    answer_id = models.ForeignKey(
+        Question,
+        verbose_name='回答',
+        on_delete=models.CASCADE,
+    )
+    answer = models.TextField(
+        'コメント',
+        max_length=1000,
+        blank=True,
+    )
+    pub_date = models.DateTimeField(
+        '回答日',
         auto_now_add=True,
     )

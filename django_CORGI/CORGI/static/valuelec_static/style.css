@@ -9,7 +9,7 @@
         transform: translateX(1080%);
     }
   }
-  
+
   .circle_corgi{
     position: absolute;
     top: 100px;
@@ -20,7 +20,7 @@
     border-radius: 100px;
     animation: right 10s .11s ease-out infinite alternate;
   }
-  
+
   .bigcorgibackground {
     background-color:rgb(255, 153, 0);
   }
@@ -28,7 +28,7 @@
     opacity: 0.5;
     font-size: 150px;
   }
-  
+
   @-webkit-keyframes passing-bar{
       0% {
           left: 0;
@@ -79,18 +79,18 @@
       50% { opacity:0; }
       100% { opacity:1; }
   }
-  
-  
+
+
   /* subject */
   .top_subject {
       background-color:rgb(255, 153, 0);
     }
     .top_subject .opacity02{
-  
+
       opacity: 0.5;
       font-size: 50px;
     }
-  
+
   .chat .chat-box {
       display: block;
       text-align: center;
@@ -98,12 +98,12 @@
   .chat  .chat-bar {
       position: relative;
       display: inline-block;
-  
+
       -webkit-transform: translate3d(0, 0, 0);
       -ms-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
   }
-  
+
   .chat  .chat-bar:before {
       content: '';
       display: inline-block;
@@ -124,7 +124,7 @@
       font-weight: bold;
       line-height: 1.5;
   }
-  
+
   .chat.move .chat-bar:before {
       -webkit-animation: passing-bar 1s ease 0s 1 normal forwards;
       animation: passing-bar 1s ease 0s 1 normal forwards;
@@ -133,11 +133,11 @@
       -webkit-animation: passing-txt 0s ease .5s 1 normal forwards;
       animation:passing-txt 0s ease .5s 1 normal forwards;
   }
-  
+
   .search_container{
       box-sizing: border-box;
     }
-  
+
     .search_container input[type="text"]{
       border: 1px solid #999;
       padding: 3px 5px;
@@ -146,11 +146,11 @@
       width: 245px;
       overflow: hidden;
     }
-  
+
     .search_container input[type="text"]:focus {
       outline: 0;
     }
-  
+
     .search_container input[type="submit"]{
       cursor: pointer;
       font-family: FontAwesome;
@@ -162,22 +162,22 @@
       display: inline-block;
       vertical-align: middle;
     }
-  
-  
-  
+
+
+
   .your_container{
       height:600px;
       width: 50%;
   }
-  
+
   .messages_container{
       height: 100%;
       width: 100%;
       background-color: #eee;
   }
-  
-  
-  
+
+
+
   .chat_header {
       padding: 6px;
       font-size: 16px;
@@ -185,24 +185,24 @@
       background: #ddd;
       border: 1px solid #ccc;
   }
-  
+
       .chat_user_status {
           float: left;
       }
-  
+
       .status_icon {
           float: left;
           line-height: 2em;
       }
-  
-  
+
+
       .chat_user_name {
           float: left;
           line-height: 2em;
           padding-left: 8px;
       }
-  
-  
+
+
   .messages {
       overflow: auto;
       height:100%;
@@ -211,8 +211,8 @@
       background-color: #eee;
       box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset
   }
-  
-  
+
+
       .message {
           margin: 0px;
           padding: 0 14px;
@@ -225,17 +225,17 @@
           max-width: 100%;
           font-size: 16px;
       }
-  
+
           .message_content{
               padding: 20px;
           }
-  
-  
+
+
       .left {
           float: left;
           line-height: 1.3em;
       }
-  
+
           .left .message_box {
               color: #333;
               background: #fff;
@@ -243,7 +243,7 @@
               border-radius: 30px 30px 30px 0px;
               margin-right: 50px;
           }
-  
+
       .right {
           float: right;
           line-height: 1.3em;
@@ -258,7 +258,7 @@
               border-radius: 30px 30px 0px 30px;
               margin-left: 50px;
           }
-  
+
       /* メッセージ１（左側） */
       .left {
           float: left;/*吹き出しをbms_messagesに対して左寄せ*/
@@ -272,9 +272,9 @@
       /* 回り込みを解除 */
       .clear {
           clear: both;
-  
+
       }
-  
+
   /* テキストエリア、送信ボタン④ */
       .end {
       background-color:#eee;
@@ -294,7 +294,7 @@
           text-align: left;/*文字を左寄せ*/
           box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;
           box-sizing: border-box;
-  
+
       }
       .send_btn {
           width: 72px;
@@ -314,7 +314,7 @@
           background:  #ff8800; /*マウスポインタを当てた時にアクティブな色になる*/
           cursor: pointer;/*マウスポインタを当てた時に、カーソルが指の形になる*/
       }
-  
+
       .evaluation{
           display: flex;
           flex-direction: row-reverse;
@@ -344,9 +344,9 @@
         .evaluation input[type='radio']:checked ~ label{
           color: #ffcc00;
         }
-  
+
       /*search_subject*/
-            
+
         .btn-square-shadow {
           display: inline-block;
           padding: 0.5em 1em;
@@ -356,7 +356,7 @@
           border-bottom: solid 4px  #c79f00cc;
           border-radius: 3px;
         }
-  
+
         .btn-square-shadow:active {
           /*ボタンを押したとき*/
           -webkit-transform: translateY(4px);
@@ -364,38 +364,38 @@
           box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
           border-bottom: none;
         }
-  
+
         .kensaku_midashi {
           padding: 0.25em 0.5em;/*上下 左右の余白*/
           color: #494949;/*文字色*/
           background: transparent;/*背景透明に*/
           border-left: solid 5px #ffcc00;/*左線*/
         }
-  
+
           .ichiran_midashi {
           padding: 0.25em 0.5em;/*上下 左右の余白*/
           color: #494949;/*文字色*/
           background: transparent;/*背景透明に*/
           border-left: solid 5px #ffcc00;/*左線*/
         }
-  
+
       /*register-class.html*/
-  
+
             .registerclass {
               padding: 0.25em 0.5em;/*上下 左右の余白*/
               color: #494949;/*文字色*/
               background: transparent;/*背景透明に*/
               border-left: solid 5px #ffcc00;/*左線*/
             }
-      
-  
+
+
         .line_orange {
           padding: 0.25em 0.5em;/*上下 左右の余白*/
           color: #494949;/*文字色*/
           background: transparent;/*背景透明に*/
           border-left: solid 5px #ffd900b0;/*左線*/
         }
-  
+
         .save_btn {
           display: inline-block;
           padding: 0.5em 1em;
@@ -405,7 +405,7 @@
           border-bottom: solid 4px  #c79f00cc;
           border-radius: 3px;
         }
-  
+
         .save_btn {
           /*ボタンを押したとき*/
           -webkit-transform: translateY(4px);
@@ -413,21 +413,17 @@
           box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
           border-bottom: none;
         }
-  
+
         .corgi_label {
           padding: 0.25em 0.5em;/*上下 左右の余白*/
           color: #494949;/*文字色*/
           background: transparent;/*背景透明に*/
           border-left: solid 5px #ffd900b0;/*左線*/
         }
-  
+
         .table .use_label {
           padding: 0.25em 0.5em;/*上下 左右の余白*/
           color: #494949;/*文字色*/
           background: transparent;/*背景透明に*/
           border-left: solid 5px #ffd900b0;/*左線*/
         }
-  
-  
-  
-  
