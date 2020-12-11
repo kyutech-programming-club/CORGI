@@ -21,6 +21,15 @@
     <div class="collapse navbar-collapse" class="navbarNav">
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">ログイン</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">ログアウト</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'valuelec:signup' %}">新規登録</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="{% url 'valuelec:search_subject' %}">講義検索</a>
         </li>
         <li class="nav-item">
