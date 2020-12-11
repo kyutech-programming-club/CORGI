@@ -6,6 +6,7 @@ app_name = 'valuelec'
 
 urlpatterns = [
     path('', views.index_render, name='index_render'),
+    path('signup/',views.signup.as_view(),name='signup'),
     path('search_subject/', views.search_subject.as_view(), name='search_subject'),
     path('explain/', views.explain, name='explain'),
     path('registerclass/', views.registerclass, name='registerclass'),

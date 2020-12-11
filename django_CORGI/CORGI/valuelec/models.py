@@ -1,6 +1,7 @@
 from django.db import models
 from django.core import validators
 
+
 class Lecture(models.Model):
     lec_name = models.CharField(
         '講義名',
