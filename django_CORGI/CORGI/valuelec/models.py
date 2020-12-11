@@ -6,18 +6,10 @@ class Lecture(models.Model):
     lec_name = models.CharField(
         '講義名',
         max_length=20,
-        validators=[validators.RegexValidator(
-            regex=u'^[ぁ-んァ-ヶー一-龠]+$',
-            message='講義名は漢字・ひらがな・カタカナのみです',
-        )],
     )
     teacher_name = models.CharField(
         '教授名',
         max_length=20,
-        validators=[validators.RegexValidator(
-            regex=u'^[ぁ-んァ-ヶー一-龠]+$',
-            message='氏名は漢字・ひらがな・カタカナのみとし、氏と名の間に全角スペースを入れてください',
-        )],
     )
     def __str__(self):
         set =  self.lec_name + "   " + self.teacher_name
