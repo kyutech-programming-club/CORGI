@@ -5,19 +5,20 @@
 <html>
 <hade>
 </hade>
+
 <body>
   <h2 class="registerclass"><strong>講義登録</strong></h2>
-  
+
   <form action='' method="POST" class="post-form">
 
     <h5 class="line_orange"><strong>
-    {% csrf_token %}
-    {{ form.as_p }}
-  </strong></h5>
+        {% csrf_token %}
+        {{ form.as_p }}
+      </strong></h5>
 
     <h5><button type="submit" class="save_btn">
-      Save
-    </button></h5>
+        Save
+      </button></h5>
   </form>
 
   <br></br>
@@ -25,5 +26,6 @@
   /
   <a href="{% url 'valuelec:search_subject' %}">講義一覧ページに戻る</a>
 </body>
+
 </html>
 {% endblock%}
