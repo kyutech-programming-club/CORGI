@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+{% extends 'valuelec_template/entries/layout.html' %}
+{% block body%}
+<html>
+<hade>
+</hade>
+<body>
+  <h2 class="registerquestion"><strong>質問投稿</strong></h2>
+
+  <form action='' method="POST" class="post-form">
+
+    <h5 class="line_orange"><strong>
+    {% csrf_token %}
+    {{ form.as_p }}
+  </strong></h5>
+
+    <h5><button type="submit" class="save_btn">
+      Save
+    </button></h5>
+  </form>
+
+  <br></br>
+  <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
+  /
+  <a href="{% url 'valuelec:search_subject' %}">講義一覧ページに戻る</a>
+</body>
+</html>
+{% endblock%}
