@@ -1,16 +1,15 @@
-
-@keyframes right{
-    0%{
+@keyframes right {
+    0% {
       width:7%;
         transform: translateX(10%);
     }
-    100%{
+    100% {
       width:7%;
         transform: translateX(1080%);
     }
-  }
+}
 
-  .circle_corgi{
+  .circle_corgi {
     position: absolute;
     top: 100px;
     left: 100px;
@@ -24,12 +23,14 @@
   .bigcorgibackground {
     background-color:rgb(255, 153, 0);
   }
-  .bigcorgibackground #opacity02{
+
+  .bigcorgibackground #opacity02 {
     opacity: 0.5;
     font-size: 150px;
   }
 
-  @-webkit-keyframes passing-bar{
+
+@-webkit-keyframes passing-bar {
       0% {
           left: 0;
           right: auto;
@@ -50,8 +51,9 @@
           right: 0;
           width: 0;
       }
-  }
-  @keyframes passing-bar{
+}
+
+@keyframes passing-bar {
       0% {
           left: 0;
           width: 0;
@@ -68,33 +70,80 @@
           left: 100%;
           width: 0;
       }
-  }
-  @-webkit-keyframes passing-txt{
+}
+
+@-webkit-keyframes passing-txt {
       0% { opacity: 0; }
       50% { opacity: 0; }
       100% { opacity: 1; }
-  }
-  @keyframes passing-txt{
+}
+
+@keyframes passing-txt {
       0% { opacity:0; }
       50% { opacity:0; }
       100% { opacity:1; }
+}
+  
+  .passing .passing-box {
+	    display: block;
+	    text-align: center;
   }
 
+  .passing .passing-bar {
+	    position: relative;
+	    display: inline-block;
+	    -webkit-transform: translate3d(0, 0, 0);
+	    -ms-transform: translate3d(0, 0, 0);
+	    transform: translate3d(0, 0, 0);
+  }
 
+  .passing .passing-bar:before {
+	    content: '';
+	    display: inline-block;
+	    width: 0;
+	    height: 100%;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    z-index: 1;
+	    background: rgb(255, 153, 0);
+  }
+
+  .passing .passing-txt {
+	    opacity: 0;
+	    -webkit-transform: translate3d(0, 0, 0);
+	    -ms-transform: translate3d(0, 0, 0);
+	    transform: translate3d(0, 0, 0);
+	    font-size: 4.0rem;
+	    font-weight: bold;
+	    line-height: 1.5;
+  }
+
+  .passing.move .passing-bar:before {
+	    -webkit-animation: passing-bar 1s ease 0s 1 normal forwards;
+	    animation: passing-bar 1s ease 0s 1 normal forwards;
+  }
+
+  .passing.move .passing-txt {
+	    -webkit-animation: passing-txt 0s ease .5s 1 normal forwards;
+	    animation:passing-txt 0s ease .5s 1 normal forwards;
+  }
+  
   /* subject */
   .top_subject {
       background-color:rgb(255, 153, 0);
-    }
-    .top_subject .opacity02{
+  }
 
+  .top_subject .opacity02 {
       opacity: 0.5;
       font-size: 50px;
-    }
+  }
 
   .chat .chat-box {
       display: block;
       text-align: center;
   }
+
   .chat  .chat-bar {
       position: relative;
       display: inline-block;
@@ -115,6 +164,7 @@
       z-index: 1;
       background: #000;
   }
+
   .chat  .chat-txt {
       opacity: 0;
       -webkit-transform: translate3d(0, 0, 0);
@@ -129,29 +179,30 @@
       -webkit-animation: passing-bar 1s ease 0s 1 normal forwards;
       animation: passing-bar 1s ease 0s 1 normal forwards;
   }
+
   .chat.move .chat-txt {
       -webkit-animation: passing-txt 0s ease .5s 1 normal forwards;
       animation:passing-txt 0s ease .5s 1 normal forwards;
   }
 
-  .search_container{
+  .search_container {
       box-sizing: border-box;
-    }
+  }
 
-    .search_container input[type="text"]{
+  .search_container input[type="text"] {
       border: 1px solid #999;
       padding: 3px 5px;
       border-radius: 20px;
       height: 2.0em;
       width: 245px;
       overflow: hidden;
-    }
+  }
 
-    .search_container input[type="text"]:focus {
+  .search_container input[type="text"]:focus {
       outline: 0;
-    }
+  }
 
-    .search_container input[type="submit"]{
+  .search_container input[type="submit"] {
       cursor: pointer;
       font-family: FontAwesome;
       font-size: 1.3em;
@@ -161,22 +212,18 @@
       outline : none;
       display: inline-block;
       vertical-align: middle;
-    }
+  }
 
-
-
-  .your_container{
+  .your_container {
       height:600px;
       width: 50%;
   }
 
-  .messages_container{
+  .messages_container {
       height: 100%;
       width: 100%;
       background-color: #eee;
   }
-
-
 
   .chat_header {
       padding: 6px;
@@ -186,22 +233,20 @@
       border: 1px solid #ccc;
   }
 
-      .chat_user_status {
-          float: left;
-      }
+  .chat_user_status {
+      float: left;
+  }
 
-      .status_icon {
-          float: left;
-          line-height: 2em;
-      }
+  .status_icon {
+      float: left;
+      line-height: 2em;
+  }
 
-
-      .chat_user_name {
-          float: left;
-          line-height: 2em;
-          padding-left: 8px;
-      }
-
+  .chat_user_name {
+      float: left;
+      line-height: 2em;
+      padding-left: 8px;
+  }
 
   .messages {
       overflow: auto;
@@ -212,218 +257,251 @@
       box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset
   }
 
+  .message {
+      margin: 0px;
+      padding: 0 14px;
+      font-size: 16px;
+      word-wrap: break-word;
+      white-space: normal;
+  }
 
-      .message {
-          margin: 0px;
-          padding: 0 14px;
-          font-size: 16px;
-          word-wrap: break-word;
-          white-space: normal;
-      }
-      .message_box{
-          margin-top: 20px;
-          max-width: 100%;
-          font-size: 16px;
-      }
+  .message_box {
+      margin-top: 20px;
+      max-width: 100%;
+      font-size: 16px;
+  }
 
-          .message_content{
-              padding: 20px;
-          }
+  .message_content {
+      padding: 20px;
+  }
 
+  .left {
+      float: left;
+      line-height: 1.3em;
+  }
 
-      .left {
-          float: left;
-          line-height: 1.3em;
-      }
+  .left .message_box {
+      color: #333;
+      background: #fff;
+      border: 2px solid #ff8800;
+      border-radius: 30px 30px 30px 0px;
+      margin-right: 50px;
+  }
 
-          .left .message_box {
-              color: #333;
-              background: #fff;
-              border: 2px solid #ff8800;
-              border-radius: 30px 30px 30px 0px;
-              margin-right: 50px;
-          }
+  .right {
+      float: right;
+      line-height: 1.3em;
+  }
 
-      .right {
-          float: right;
-          line-height: 1.3em;
-      }
-          /*
-          *追加
-          */
-          .right .message_box {
-              color: #fff;
-              background: #ff8800;
-              border: 2px solid #ff8800;
-              border-radius: 30px 30px 0px 30px;
-              margin-left: 50px;
-          }
+  /*追加*/
+  .right .message_box {
+      color: #fff;
+      background: #ff8800;
+      border: 2px solid #ff8800;
+      border-radius: 30px 30px 0px 30px;
+      margin-left: 50px;
+  }
 
-      /* メッセージ１（左側） */
-      .left {
-          float: left;/*吹き出しをbms_messagesに対して左寄せ*/
-          line-height: 1.3em;
-      }
-      /* メッセージ２（右側） */
-      .right {
-          float: right;/*吹き出しをbms_messagesに対して右寄せ*/
-          line-height: 1.3em;
-      }
-      /* 回り込みを解除 */
-      .clear {
-          clear: both;
+  /* メッセージ１（左側）*/
+  .left {
+      float: left;/*吹き出しをbms_messagesに対して左寄せ*/
+      line-height: 1.3em;
+  }
 
-      }
+  /* メッセージ２（右側）*/
+  .right {
+      float: right;/*吹き出しをbms_messagesに対して右寄せ*/
+      line-height: 1.3em;
+  }
+
+  /* 回り込みを解除 */
+  .clear {
+      clear: both;
+
+  }
 
   /* テキストエリア、送信ボタン④ */
-      .end {
-      background-color:#eee;
+  .end {
+      background-color: #eee;
       border-right: 1px solid #ddd;
       border-left: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
       height: 48px;
       padding: 4px;
   }
-      .send_message{
-          width: calc(100% - 75px);
-          line-height: 16px;
-          height: 48px;
-          padding: 14px 6px 0px 6px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          text-align: left;/*文字を左寄せ*/
-          box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;
-          box-sizing: border-box;
 
-      }
-      .send_btn {
-          width: 72px;
-          height: 48px;
-          font-size: 16px;
-          line-height: 3em;
-          float: right;/*bms_sendに対して右寄せ*/
-          color: #fff;
-          font-weight: bold;
-          background: #bcbcbc;
-          text-align: center;
-          border: 1px solid #bbb;
-          border-radius: 4px;
-          box-sizing: border-box;
-      }
-      .send_btn:hover {
-          background:  #ff8800; /*マウスポインタを当てた時にアクティブな色になる*/
-          cursor: pointer;/*マウスポインタを当てた時に、カーソルが指の形になる*/
-      }
+  .send_message{
+      width: calc(100% - 75px);
+      line-height: 16px;
+      height: 48px;
+      padding: 14px 6px 0px 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: left; /*文字を左寄せ*/
+      box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;
+      box-sizing: border-box;
 
-      .evaluation{
-          display: flex;
-          flex-direction: row-reverse;
-          justify-content: center;
-        }
-        .evaluation input[type='radio']{
-          display: none;
-        }
-        .evaluation label{
-          position: relative;
-          padding: 10px 10px 0;
-          color: gray;
-          cursor: pointer;
-          font-size: 50px;
-        }
-        .evaluation label .text{
-          position: absolute;
-          left: 0;
-          top: 0;
-          right: 0;
-          text-align: center;
-          font-size: 12px;
-          color: gray;
-        }
-        .evaluation label:hover,
-        .evaluation label:hover ~ label,
-        .evaluation input[type='radio']:checked ~ label{
-          color: #ffcc00;
-        }
+  }
 
-      /*search_subject*/
+  .send_btn {
+      width: 72px;
+      height: 48px;
+      font-size: 16px;
+      line-height: 3em;
+      float: right; /*sendに対して右寄せ*/
+      color: #fff;
+      font-weight: bold;
+      background: #bcbcbc;
+      text-align: center;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      box-sizing: border-box;
+  }
 
-        .btn-square-shadow {
-          display: inline-block;
-          padding: 0.5em 1em;
-          text-decoration: none;
-          background:  #ffcc00;/*ボタン色*/
-          color: #FFF;
-          border-bottom: solid 4px  #c79f00cc;
-          border-radius: 3px;
-        }
+  .send_btn:hover {
+      background: #ff8800; /*マウスポインタを当てた時にアクティブな色になる*/
+      cursor: pointer; /*マウスポインタを当てた時に、カーソルが指の形になる*/
+  }
 
-        .btn-square-shadow:active {
-          /*ボタンを押したとき*/
-          -webkit-transform: translateY(4px);
-          transform: translateY(4px);/*下に動く*/
-          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
-          border-bottom: none;
-        }
+  .evaluation{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+  }
 
-        .kensaku_midashi {
-          padding: 0.25em 0.5em;/*上下 左右の余白*/
-          color: #494949;/*文字色*/
-          background: transparent;/*背景透明に*/
-          border-left: solid 5px #ffcc00;/*左線*/
-        }
+  .evaluation input[type='radio']{
+      display: none;
+  }
 
-          .ichiran_midashi {
-          padding: 0.25em 0.5em;/*上下 左右の余白*/
-          color: #494949;/*文字色*/
-          background: transparent;/*背景透明に*/
-          border-left: solid 5px #ffcc00;/*左線*/
-        }
+  .evaluation label{
+      position: relative;
+      padding: 10px 10px 0;
+      color: gray;
+      cursor: pointer;
+      font-size: 50px;
+  }
 
-      /*register-class.html*/
+  .evaluation label .text{
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      text-align: center;
+      font-size: 12px;
+      color: gray;
+  }
 
-            .registerclass {
-              padding: 0.25em 0.5em;/*上下 左右の余白*/
-              color: #494949;/*文字色*/
-              background: transparent;/*背景透明に*/
-              border-left: solid 5px #ffcc00;/*左線*/
-            }
+  .evaluation label:hover,
+  .evaluation label:hover ~ label,
+  .evaluation input[type='radio']:checked ~ label {
+      color: #ffcc00;
+  }
+
+  /*search_subject*/
+
+  .btn-square-shadow {
+      display: inline-block;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      background: #ffcc00; /*ボタン色*/
+      color: #FFF;
+      border-bottom: solid 4px #c79f00cc;
+      border-radius: 3px;
+  }
+
+  .btn-square-shadow:active {
+      /*ボタンを押したとき*/
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px); /*下に動く*/
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); /*影を小さく*/
+      border-bottom: none;
+  }
+
+  .kensaku_midashi {
+      padding: 0.25em 0.5em; /*上下 左右の余白*/
+      color: #494949; /*文字色*/
+      background: transparent; /*背景透明に*/
+      border-left: solid 5px #ffcc00; /*左線*/
+  }
+
+  .ichiran_midashi {
+      padding: 0.25em 0.5em; /*上下 左右の余白*/
+      color: #494949; /*文字色*/
+      background: transparent; /*背景透明に*/
+      border-left: solid 5px #ffcc00; /*左線*/
+  }
+
+  /*register-class.html*/
+
+  .registerclass {
+      padding: 0.25em 0.5em; /*上下 左右の余白*/
+      color: #494949; /*文字色*/
+      background: transparent; /*背景透明に*/
+      border-left: solid 5px #ffcc00; /*左線*/
+  }
 
 
-        .line_orange {
-          padding: 0.25em 0.5em;/*上下 左右の余白*/
-          color: #494949;/*文字色*/
-          background: transparent;/*背景透明に*/
-          border-left: solid 5px #ffd900b0;/*左線*/
-        }
+  .line_orange {
+      padding: 0.25em 0.5em; /*上下 左右の余白*/
+      color: #494949; /*文字色*/
+      background: transparent; /*背景透明に*/
+      border-left: solid 5px #ffd900b0; /*左線*/
+  }
 
-        .save_btn {
-          display: inline-block;
-          padding: 0.5em 1em;
-          text-decoration: none;
-          background:  #ffcc00;/*ボタン色*/
-          color: #FFF;
-          border-bottom: solid 4px  #c79f00cc;
-          border-radius: 3px;
-        }
+  .save_btn {
+      display: inline-block;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      background: #ffcc00; /*ボタン色*/
+      color: #FFF;
+      border-bottom: solid 4px #c79f00cc;
+      border-radius: 3px;
+  }
 
-        .save_btn {
-          /*ボタンを押したとき*/
-          -webkit-transform: translateY(4px);
-          transform: translateY(4px);/*下に動く*/
-          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
-          border-bottom: none;
-        }
+  .save_btn {
+      /*ボタンを押したとき*/
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px); /*下に動く*/
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); /*影を小さく*/
+      border-bottom: none;
+  }
 
-        .corgi_label {
-          padding: 0.25em 0.5em;/*上下 左右の余白*/
-          color: #494949;/*文字色*/
-          background: transparent;/*背景透明に*/
-          border-left: solid 5px #ffd900b0;/*左線*/
-        }
+  .corgi_label {
+      padding: 0.25em 0.5em; /*上下 左右の余白*/
+      color: #494949; /*文字色*/
+      background: transparent; /*背景透明に*/
+      border-left: solid 5px #ffd900b0; /*左線*/
+  }
 
-        .table .use_label {
-          padding: 0.25em 0.5em;/*上下 左右の余白*/
-          color: #494949;/*文字色*/
-          background: transparent;/*背景透明に*/
-          border-left: solid 5px #ffd900b0;/*左線*/
-        }
+  .table .use_label {
+      padding: 0.25em 0.5em; /*上下 左右の余白*/
+      color: #494949; /*文字色*/
+      background: transparent; /*背景透明に*/
+      border-left: solid 5px #ffd900b0; /*左線*/
+  }
+        
+  /*valuelist*/
+        
+  /*星の色*/
+  .color-yellow{
+      font-size: 20px; /* 文字サイズ指定 */
+      color: #EDB92A; /*文字色*/
+  }
+
+  .hyouka_midashi {
+      padding: 0.25em 0.5em; /*上下 左右の余白*/
+      color: #494949; /*文字色*/
+      background: transparent; /*背景透明に*/
+      border-left: solid 5px #ffd900b0; /*左線*/
+  }
+
+  /*answer*/
+
+  .answer_midashi {
+      padding: 0.25em 0.5em; /*上下 左右の余白*/
+      color: #494949; /*文字色*/
+      background: transparent; /*背景透明に*/
+      border-left: solid 5px #ffd900b0; /*左線*/
+  }
+
+       

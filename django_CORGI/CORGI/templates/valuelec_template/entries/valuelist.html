@@ -13,24 +13,27 @@
   <div class="registervalue">
     <a href="{% url 'valuelec:registervalue' %}">評価を投稿する</a>
   </div>
+  <br>
+  <h1 class="hyouka_midashi">講義評価</h1>
+  <br>
   <h1>{{ lecture.lec_name }}  {{ lecture.teacher_name}}</h1>
   <ul class="list-group list-group-flush">
     {% for value in lecture.valuelec_register_set.all|dictsortreversed:"pub_date" %}
     <div class="card">
       <div class="card-body">
-        <h4 class="card-total">私の総合評価{{ value.total_evaluation }}</h4>
+        <h4 class="card-total">私の総合評価<span class="color-yellow">{{ value.total_evaluation }}</span></h4>
         <table class="table table-striped">
           <tr>
             <td>講義の簡単さ</td>
-            <td>{{ value.lec_simplicity }}</td>
+            <td><p class="color-yellow">{{ value.lec_simplicity }}</p></td>
           </tr>
           <tr>
             <td>単位の取りやすさ</td>
-            <td>{{ value.credit_simplicity }}</td>
+            <td><p class="color-yellow">{{ value.credit_simplicity }}</p></td>
           </tr>
           <tr>
             <td>課題の少なさ</td>
-            <td>{{ value.task_smallness }}</td>
+            <td><p class="color-yellow">{{ value.task_smallness }}</p></td>
           </tr>
           <tr>
             <td>授業形態</td>
@@ -51,8 +54,9 @@
     <p>まだ講義評価が投稿されていないようです！あなたの評価お待ちしてます！</p>
     {% endfor %}
   </ul>
-  <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
   <br>
+  <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
+  /
   <a href="{% url 'valuelec:search_subject' %}">講義一覧ページに戻る</a>
   <br><br>
 </body>

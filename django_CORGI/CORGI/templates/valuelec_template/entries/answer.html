@@ -11,6 +11,9 @@
 
 <body>
   <a href="{% url 'valuelec:registeranswer' %}">回答を投稿する</a>
+  <br>
+  <h1 class="answer_midashi">質問回答</h1>
+  <br>
   <h1>{{ question.question }}</h1>
   <ul class="list-group list-group-flush">
     {% for answer in question.answer_set.all|dictsortreversed:"pub_date" %}
@@ -32,10 +35,11 @@
     <p>まだ講義評価が投稿されていないようです！あなたの評価お待ちしてます！</p>
     {% endfor %}
   </ul>
+  <br>
   <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
-  <br>
+  /
   <a href="{% url 'valuelec:search_subject' %}">講義一覧ページに戻る</a>
-  <br>
+  /
   <a href="{% url 'valuelec:question' %}">質問一覧ページに戻る</a>
   <br>
 </body>
