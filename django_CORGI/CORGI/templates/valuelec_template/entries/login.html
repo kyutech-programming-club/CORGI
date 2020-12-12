@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'valuelec_template/entries/layout.html' %}
+{% block body %}
+<html>
+<body>
+  <form action="/login" method="post">
+    {% csrf_token %}
+    <div>
+      <label for="email">大学のメールアドレス</label>
+      <input type="mail" id="email" name="email">
+    </div>
+    <input type="submit" value="送信する">
+  </form>
+</body>
+</html>
+{% endblock %}

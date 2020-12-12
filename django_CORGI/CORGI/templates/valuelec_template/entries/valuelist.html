@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% extends 'valuelec_template/entries/layout.html' %}
+{% block body %}
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CORGI</title>
+</head>
+
+<body>
+  <h1 class="hyouka_midashi"><strong>講義評価</strong></h1>
+  <br>
+  <h1>{{ lecture.lec_name }}  {{ lecture.teacher_name}}</h1>
+  <ul class="list-group list-group-flush">
+    {% for value in lecture.valuelec_register_set.all|dictsortreversed:"pub_date" %}
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-total">私の総合評価<span class="color-yellow">{{ value.total_evaluation }}</span></h4>
+        <table class="table table-striped">
+          <tr>
+            <td>講義の簡単さ</td>
+            <td><p class="color-yellow">{{ value.lec_simplicity }}</p></td>
+          </tr>
+          <tr>
+            <td>単位の取りやすさ</td>
+            <td><p class="color-yellow">{{ value.credit_simplicity }}</p></td>
+          </tr>
+          <tr>
+            <td>課題の少なさ</td>
+            <td><p class="color-yellow">{{ value.task_smallness }}</p></td>
+          </tr>
+          <tr>
+            <td>授業形態</td>
+            <td>{{ value.class_style }}</td>
+          </tr>
+          <tr>
+            <td>コメント</td>
+            <td>{{ value.comment }}</td>
+          </tr>
+          <tr>
+            <td>登録日</td>
+            <td>{{ value.pub_date }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    {% empty %}
+    <p>まだ講義評価が投稿されていないようです！あなたの評価お待ちしてます！</p>
+    {% endfor %}
+  </ul>
+  <br>
+  <div class="registervalue">
+    <h5><a href="{% url 'valuelec:registervalue' %}">評価を投稿する</a></h5>
+  </div>
+  <br>
+  <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
+  /
+  <a href="{% url 'valuelec:search_subject' %}">講義一覧ページに戻る</a>
+  <br><br>
+</body>
+
+</html>
+{% endblock %}

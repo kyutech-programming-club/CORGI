@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% extends 'valuelec_template/entries/layout.html' %}
+{% block body%}
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../../static/style.css" />
+    <title>CORGI</title>
+</head>
+<body>
+    <div class="top_subject">
+        <center>
+    <p class="opacity02"> <b>
+        CORGI
+    </b></p>
+    <h5>先輩後輩マッチングサイト</h5>
+        </center>
+    </div>
+
+
+
+
+    <h2>情報リテラシー</h2>
+    <div>
+        <center>
+        <h1>単位の取りやすさ</h1>
+        </center>
+    <form type="get" action="#" >
+
+        {% csrf_token %}
+        {{ form.select.label }}
+        <div class="evaluation">
+          <input id="star1" type="radio" name="star" value="5" />
+          <label for="star1"><span class="text">超楽</span>★</label>
+          <input id="star2" type="radio" name="star" value="4" />
+          <label for="star2"><span class="text">楽</span>★</label>
+          <input id="star3" type="radio" name="star" value="3" />
+          <label for="star3"><span class="text">普通</span>★</label>
+          <input id="star4" type="radio" name="star" value="2" />
+          <label for="star4"><span class="text">やばい</span>★</label>
+          <input id="star5" type="radio" name="star" value="1" />
+          <label for="star5"><span class="text">無理</span>★</label>
+        </div>
+    </form>
+    </div>
+    <!--<h3 id="me" user_id="1">あなたは後輩です</h3>
+    <h3 id="partner" thread_id="1">先輩</h3>-->
+    <div class="users">
+        <button class="user" user_class="2">K先輩</button>
+    </div>
+    <br>
+    <div class="your_container">
+
+        <!-- チャットの外側部分① -->
+        <div class="messages_container">
+            <!-- ヘッダー部分② -->
+            <div class="chat_header">
+                <div class="chat_user_status">
+                    <div class="status_icon">●</div>
+                    <div class="chat_user_name">情報リテラシー</div>
+                </div>
+            </div>
+
+            <!-- タイムライン部分③ -->
+            <div class="messages">
+
+
+
+                <!--メッセージ２（右側）-->
+                <div class="message right">
+                    <div class="message_box">
+                        <div class="message_content">
+                            <div class="message_text">情報リテラシーって勉強しないと単位落としますか？</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!--メッセージ１（左側）-->
+                <div class="message bms_left">
+                    <div class="message_box">
+                        <div class="message_content">
+                            <div class="message_text">3割落単するらしいから勉強したほうが良いよ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+
+
+            </div>
+
+            <div class="send">
+                <textarea class="send_message"></textarea>
+                <div class="send_btn">送信</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+</body>
+</html>
+{% endblock %}
