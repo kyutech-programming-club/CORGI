@@ -466,18 +466,25 @@
       border-bottom: none;
   }
 
+  .hyoukanyuryoku_midashi {
+      padding: 0.25em 0.5em; /*上下 左右の余白*/
+      color: #494949; /*文字色*/
+      background: transparent; /*背景透明に*/
+      border-left: solid 5px #ffcc00; /*左線*/
+  }
+
   .corgi_label {
       padding: 0.25em 0.5em; /*上下 左右の余白*/
       color: #494949; /*文字色*/
       background: transparent; /*背景透明に*/
-      border-left: solid 5px #ffd900b0; /*左線*/
+      border-left: solid 5px #ffcc00; /*左線*/
   }
 
   .table .use_label {
       padding: 0.25em 0.5em; /*上下 左右の余白*/
       color: #494949; /*文字色*/
       background: transparent; /*背景透明に*/
-      border-left: solid 5px #ffd900b0; /*左線*/
+      border-left: solid 5px #ffcc00; /*左線*/
   }
         
   /*valuelist*/
@@ -492,7 +499,7 @@
       padding: 0.25em 0.5em; /*上下 左右の余白*/
       color: #494949; /*文字色*/
       background: transparent; /*背景透明に*/
-      border-left: solid 5px #ffd900b0; /*左線*/
+      border-left: solid 5px #ffcc00; /*左線*/
   }
 
   /*answer*/
@@ -501,7 +508,41 @@
       padding: 0.25em 0.5em; /*上下 左右の余白*/
       color: #494949; /*文字色*/
       background: transparent; /*背景透明に*/
-      border-left: solid 5px #ffd900b0; /*左線*/
+      border-left: solid 5px #ffcc00; /*左線*/
   }
 
+  /*login*/
+
+  .login_midashi {
+      padding: 0.25em 0.5em; /*上下 左右の余白*/
+      color: #494949; /*文字色*/
+      background: transparent; /*背景透明に*/
+      border-left: solid 5px #ffcc00; /*左線*/
+  }
+
+  .btn {
+      border-radius: 5px;
+      background-color: #4694d1;
+      padding: 20px;
+      text-align: center;
+      color: white;
+  }
+
+  .loginform_midashi {
+      padding: 0.25em 0.5em; /*上下 左右の余白*/
+      color: #494949; /*文字色*/
+      background: transparent; /*背景透明に*/
+      border-left: solid 5px #ffcc00; /*左線*/
+  }
+
+  /*question*/
+
+  .question_midashi {
+    padding: 0.25em 0.5em; /*上下 左右の余白*/
+    color: #494949; /*文字色*/
+    background: transparent; /*背景透明に*/
+    border-left: solid 5px #ffcc00; /*左線*/
+}
+
+  
        

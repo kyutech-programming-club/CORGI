@@ -21,9 +21,7 @@
 
   <div class="table">
     <table width="100%">
-      <strong>
-        <h3 class="use_label">使い方</h3>
-      </strong>
+        <h3 class="use_label"><strong>使い方</strong></h3>
     </table>
   </div>
   <br>
@@ -32,8 +30,16 @@
     <br><a href="{% url 'valuelec:index_render' %}">「トップページ」</a>➡︎<a href="{% url 'valuelec:search_subject' %}">「検索ぺージ」</a>から講義を選択してね！！
     <br><br>
     <strong>[講義評価をする方法]</strong>
-    <br><a href="{% url 'valuelec:registerclass' %}">講義登録</a>から
+    <br><a href="{% url 'valuelec:registerclass' %}">「講義登録」</a>から
     講義名と教授名を入力して新しく登録してね！！
+    <br><br>
+    <strong>[講義の質問をする方法]</strong>
+    <br><a href="{% url 'valuelec:question' %}">「講義質問」</a>の<a href="{% url 'valuelec:registerquestion' %}">「質問投稿」</a>から質問してね！！
+    <br><br>
+    <strong>[講義の質問に回答する方法]</strong>
+    <br><a href="{% url 'valuelec:question' %}">「講義質問」</a>から回答したい質問を選んで<a href="{% url 'valuelec:registeranswer' %}">「回答を投稿する」</a>から投稿してね！！
+
+
   </h5>
   <!-- 画像挿入 -->
   <br>

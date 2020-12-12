@@ -11,18 +11,19 @@
 </head>
 
 <body>
-  <h1 class="question_midashi">講義名で絞り込めます</h1>
+  <h1 class="question_midashi">質問がある講義を検索</h1>
   <form action="" method="get">
     <input name="query" value="{{ request.GET.query }}" type="text">
     <button class="btn-square-shadow" type="submit">
       検索する
     </button>
   </form>
+  <br>
   <h5><strong>
       <a href="{% url 'valuelec:registerquestion' %}">質問投稿</a>
       /
       <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
-      <br></br>
+      <br><br><br>
       <h1 class=ichiran_midashi>
         質問一覧
       </h1>

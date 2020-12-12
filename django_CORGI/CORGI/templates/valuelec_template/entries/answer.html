@@ -10,9 +10,7 @@
 </head>
 
 <body>
-  <a href="{% url 'valuelec:registeranswer' %}">回答を投稿する</a>
-  <br>
-  <h1 class="answer_midashi">質問回答</h1>
+  <h1 class="answer_midashi"><strong>質問回答</strong></h1>
   <br>
   <h1>{{ question.question }}</h1>
   <ul class="list-group list-group-flush">
@@ -32,9 +30,11 @@
       </div>
     </div>
     {% empty %}
-    <p>まだ講義評価が投稿されていないようです！あなたの評価お待ちしてます！</p>
+    <p>まだ回答が投稿されていないようです！あなたの回答お待ちしてます！</p>
     {% endfor %}
   </ul>
+  <br>
+  <h5><a href="{% url 'valuelec:registeranswer' %}">回答を投稿する</a></h5>
   <br>
   <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
   /

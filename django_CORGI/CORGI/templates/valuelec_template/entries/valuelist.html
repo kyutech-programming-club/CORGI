@@ -10,11 +10,7 @@
 </head>
 
 <body>
-  <div class="registervalue">
-    <a href="{% url 'valuelec:registervalue' %}">評価を投稿する</a>
-  </div>
-  <br>
-  <h1 class="hyouka_midashi">講義評価</h1>
+  <h1 class="hyouka_midashi"><strong>講義評価</strong></h1>
   <br>
   <h1>{{ lecture.lec_name }}  {{ lecture.teacher_name}}</h1>
   <ul class="list-group list-group-flush">
@@ -54,6 +50,10 @@
     <p>まだ講義評価が投稿されていないようです！あなたの評価お待ちしてます！</p>
     {% endfor %}
   </ul>
+  <br>
+  <div class="registervalue">
+    <h5><a href="{% url 'valuelec:registervalue' %}">評価を投稿する</a></h5>
+  </div>
   <br>
   <a href="{% url 'valuelec:index_render' %}">トップページに戻る</a>
   /
